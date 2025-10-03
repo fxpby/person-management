@@ -122,7 +122,7 @@ const { signup, isSigning, isSend, email, password, confirmPassword } =
 
 const { verifyEmail, isVerifying, verifyToken } = useVerifyEmail(email);
 
-const { resendCountdown, resend, isResending } = useResend();
+const { resendCountdown, resend, isResending } = useResend(email);
 
 let resendInterval;
 
