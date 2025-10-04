@@ -82,7 +82,9 @@ function handleSubmit() {
 
   uploadAvatar(filename, {
     onSuccess: (avatarData) => {
-      avatar.value = `${SUPABASE_URL}storage/v1/object/public/${avatarData.fullPath}`;
+      console.log('avatarData: ', avatarData);
+      avatar.value = `${SUPABASE_URL}/storage/v1/object/public/${avatarData.fullPath}`;
+      console.log('avatar: ', avatar);
 
       updateEmployee(employeeId);
     },
